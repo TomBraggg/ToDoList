@@ -33,6 +33,10 @@ public class ToDoList {
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<Task> tasks;
 	
+	public ToDoList() {
+		
+	}
+	
 	public ToDoList(String name) {
 		super();
 		this.name = name;

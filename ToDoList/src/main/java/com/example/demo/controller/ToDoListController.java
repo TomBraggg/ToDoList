@@ -47,7 +47,7 @@ public class ToDoListController {
 		return new ResponseEntity<ToDoListDTO>(toDoList, HttpStatus.OK);
 	}
 	
-	@GetMapping("/{name}")
+	@GetMapping("/name/{name}")
 	public ResponseEntity<ToDoListDTO> getToDoListByName(@PathVariable("name") String name) {
 		ToDoListDTO toDoList = toDoListService.readToDoListByName(name);
 		return new ResponseEntity<ToDoListDTO>(toDoList, HttpStatus.OK);

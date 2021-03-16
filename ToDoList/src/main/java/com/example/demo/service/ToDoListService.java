@@ -74,7 +74,6 @@ public class ToDoListService {
 	}
 
 	public Boolean deleteToDoList(int id) {
-		
 		if (toDoListRepository.existsById(id)) {
 			toDoListRepository.deleteById(id);
 			return true;
