@@ -1,5 +1,5 @@
 INSERT INTO todolist (name)
-VALUES ('Shopping');
+VALUES ('shopping');
 
 INSERT INTO task (name, fk_todolist_id)
-VALUES ( 'get this bread' , 1);
+VALUES ( 'bread' , 1);

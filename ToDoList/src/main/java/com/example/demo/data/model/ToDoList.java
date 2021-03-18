@@ -47,6 +47,12 @@ public class ToDoList {
 		this.id = id;
 		this.name = name;
 	}
+	
+	public ToDoList(@NotNull String name, List<Task> tasks) {
+		super();
+		this.name = name;
+		this.tasks = tasks;
+	}
 
 	public ToDoList(int id, @NotNull String name, List<Task> tasks) {
 		super();
