@@ -29,7 +29,7 @@ public class ToDoList {
 	private String name;
 	
 	
-	@OneToMany(mappedBy = "toDoList", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "toDoList", fetch = FetchType.EAGER)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<Task> tasks;
 	
@@ -46,6 +46,13 @@ public class ToDoList {
 		super();
 		this.id = id;
 		this.name = name;
+	}
+
+	public ToDoList(int id, @NotNull String name, List<Task> tasks) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.tasks = tasks;
 	}
 
 	public int getId() {
