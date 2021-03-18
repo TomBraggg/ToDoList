@@ -16,12 +16,12 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
-@Table(name = "toDoList")
+@Table(name = "todolist")
 public class ToDoList {
 
 	@Id // Auto-incrementing
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "toDoList_ID")
+	@Column(name = "todolist_id")
 	private int id;
 	
 	@Column(name = "name", unique = true)
@@ -29,7 +29,7 @@ public class ToDoList {
 	private String name;
 	
 	
-	@OneToMany(mappedBy = "toDoList", fetch = FetchType.LAZY, orphanRemoval = true)
+	@OneToMany(mappedBy = "toDoList", fetch = FetchType.LAZY)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<Task> tasks;
 	
@@ -72,11 +72,12 @@ public class ToDoList {
 		this.tasks = tasks;
 	}
 
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((tasks == null) ? 0 : tasks.hashCode());
 		return result;
@@ -91,8 +92,6 @@ public class ToDoList {
 		if (getClass() != obj.getClass())
 			return false;
 		ToDoList other = (ToDoList) obj;
-		if (id != other.id)
-			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;

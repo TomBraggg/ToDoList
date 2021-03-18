@@ -59,7 +59,7 @@ public class TaskController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Location", String.valueOf(newTask.getId()));
 		
-		return new ResponseEntity<TaskDTO>(newTask, headers, HttpStatus.OK);
+		return new ResponseEntity<TaskDTO>(newTask, headers, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/{id}")

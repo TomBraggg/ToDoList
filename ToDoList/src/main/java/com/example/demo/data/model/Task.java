@@ -25,7 +25,7 @@ public class Task {
 	private String name;
 	
 	@ManyToOne(targetEntity = ToDoList.class, fetch = FetchType.EAGER)
-	@JoinColumn(name = "fk_toDoList_ID")
+	@JoinColumn(name = "fk_todolist_id")
 	private ToDoList toDoList;
 
 	public Task() {
@@ -71,7 +71,6 @@ public class Task {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((toDoList == null) ? 0 : toDoList.hashCode());
 		return result;
@@ -86,8 +85,6 @@ public class Task {
 		if (getClass() != obj.getClass())
 			return false;
 		Task other = (Task) obj;
-		if (id != other.id)
-			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;

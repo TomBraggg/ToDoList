@@ -70,7 +70,7 @@ public class ToDoListController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Boolean> deleteDuck(@PathVariable("id") int id) {
+	public ResponseEntity<Boolean> deleteToDoList(@PathVariable("id") int id) {
 		return new ResponseEntity<Boolean>(toDoListService.deleteToDoList(id), HttpStatus.OK);
 	}
 	
