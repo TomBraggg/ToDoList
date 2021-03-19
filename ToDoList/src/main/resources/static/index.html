@@ -12,32 +12,25 @@
         <h1 class="text-center"> To Do List! </h1>
         <div class="row">
             <div class="col-md">
-                <input type="number" class="form-control" id="firstNumber" placeholder="First number:"/>
+                <input type="number" class="form-control" id="listid" placeholder="ID"/>
             </div>
             <div class="col-md">
-                <input type="number" class="form-control" id="secondNumber" placeholder="Second number:" />
+                <input type="text" class="form-control" id="listname" placeholder="Name"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md text-center">
                 <br/>
-                <button class="btn btn-primary" id="+" onclick="get();"> &plus;</button>
-                <button class="btn btn-primary" id="-" onclick="minus();"> &minus;</button>
-                <button class="btn btn-primary" id="x" onclick="multiply();"> &times;</button>
-                <button class="btn btn-primary" id="/" onclick="divide();"> &sol;</button>
+                <button class="btn btn-primary" id="getList" onclick="getList();"> Get List </button>
+                <button class="btn btn-primary" id="postList" onclick="postList();"> Post List </button>
+                <button class="btn btn-primary" id="putList" onclick="putList();"> Update List </button>
+                <button class="btn btn-primary" id="deleteList" onclick="deleteList();"> Delete List </button>
             </div>
         </div>
         <div class="row">
             <div class="col-md">
                 <br/>
                 <input type="text" class="form-control" id="result" placeholder="Result" disabled/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md text-center">
-                <br/>
-                <button class="btn btn-danger" id="clearValues" onclick="clearValues();">Clear Values</button>
-                <button class="btn btn-danger" id="clearHistory" onclick="clearHistory();">Clear History</button>
             </div>
         </div>
         <div class="history"></div>
