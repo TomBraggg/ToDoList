@@ -38,19 +38,19 @@ public class ToDoListController {
 	@GetMapping
 	public ResponseEntity<List<ToDoListDTO>> getAllToDoLists() {
 		List<ToDoListDTO> data = toDoListService.readAllToDoLists();
-		return new ResponseEntity<List<ToDoListDTO>>(data, HttpStatus.OK);
+		return new ResponseEntity<>(data, HttpStatus.OK);
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<ToDoListDTO> getToDoListById(@PathVariable("id") Integer id) {
 		ToDoListDTO toDoList = toDoListService.readToDoListById(id);
-		return new ResponseEntity<ToDoListDTO>(toDoList, HttpStatus.OK);
+		return new ResponseEntity<>(toDoList, HttpStatus.OK);
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<ToDoListDTO> getToDoListByName(@PathVariable("name") String name) {
 		ToDoListDTO toDoList = toDoListService.readToDoListByName(name);
-		return new ResponseEntity<ToDoListDTO>(toDoList, HttpStatus.OK);
+		return new ResponseEntity<>(toDoList, HttpStatus.OK);
 	}
 	
 	@PostMapping
@@ -60,18 +60,18 @@ public class ToDoListController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Location", String.valueOf(newToDoList.getId()));
 		
-		return new ResponseEntity<ToDoListDTO>(newToDoList, headers, HttpStatus.CREATED);
+		return new ResponseEntity<>(newToDoList, headers, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<ToDoListDTO> updateToDoList(@PathVariable("id") int id, @RequestBody ToDoList toDoList) {
 		ToDoListDTO updatedToDoList = toDoListService.updateToDoList(id, toDoList);
-		return new ResponseEntity<ToDoListDTO>(updatedToDoList, HttpStatus.OK);
+		return new ResponseEntity<>(updatedToDoList, HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Boolean> deleteToDoList(@PathVariable("id") int id) {
-		return new ResponseEntity<Boolean>(toDoListService.deleteToDoList(id), HttpStatus.OK);
+		return new ResponseEntity<>(toDoListService.deleteToDoList(id), HttpStatus.OK);
 	}
 	
 }

@@ -11,7 +11,7 @@ import com.example.demo.data.model.ToDoList;
 import com.example.demo.dto.ToDoListDTO;
 
 @SpringBootTest
-public class ToDoListMapperTest {
+class ToDoListMapperTest {
 
 		@Autowired
 		private ToDoListMapper toDoListMapper;

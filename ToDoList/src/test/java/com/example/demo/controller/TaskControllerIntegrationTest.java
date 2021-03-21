@@ -26,21 +26,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 @Sql(scripts = { "classpath:test-schema.sql", "classpath:test-data.sql" },
 	executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-public class TaskControllerIntegrationTest {
+class TaskControllerIntegrationTest {
 
 	@Autowired
 	private MockMvc mvc;
 	
 	@Autowired
-	private TaskMapper taskMapper;
-	
-	@Autowired
 	private ObjectMapper objectMapper;
 	
-	private Task validTask = new Task(1, "bread");
 	private TaskDTO validTaskDTO = new TaskDTO(1, "bread");
-	
-	private List<Task> validTasks = List.of(validTask);
+
 	private List<TaskDTO> validTaskDTOs = List.of(validTaskDTO);
 	
 	@Test

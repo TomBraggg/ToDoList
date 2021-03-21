@@ -24,7 +24,7 @@ import com.example.demo.exceptions.TaskNotFoundException;
 import com.example.demo.mappers.TaskMapper;
 
 @SpringBootTest
-public class TaskServiceUnitTest {
+class TaskServiceUnitTest {
 
 	@Autowired
 	private TaskService taskService;

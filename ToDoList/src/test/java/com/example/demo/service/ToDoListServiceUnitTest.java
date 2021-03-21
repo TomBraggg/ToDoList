@@ -26,7 +26,7 @@ import com.example.demo.exceptions.ToDoListNotFoundException;
 import com.example.demo.mappers.ToDoListMapper;
 
 @SpringBootTest
-public class ToDoListServiceUnitTest {
+class ToDoListServiceUnitTest {
 
 	@Autowired
 	private ToDoListService toDoListService;

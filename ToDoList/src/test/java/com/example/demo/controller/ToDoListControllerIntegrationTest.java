@@ -28,13 +28,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 @Sql(scripts = { "classpath:test-schema.sql", "classpath:test-data.sql" },
 	executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-public class ToDoListControllerIntegrationTest {
+class ToDoListControllerIntegrationTest {
 
 	@Autowired
 	private MockMvc mvc;
-	
-	@Autowired
-	private ToDoListMapper toDoListMapper;
 	
 	@Autowired
 	private ObjectMapper objectMapper;
@@ -44,11 +41,9 @@ public class ToDoListControllerIntegrationTest {
 	
 	private List<Task> validTasks = List.of(validTask);
 	private List<TaskDTO> validTaskDTOs = List.of(validTaskDTO);
-	
-	private ToDoList validToDoList = new ToDoList(1, "shopping", validTasks);
+
 	private ToDoListDTO validToDoListDTO = new ToDoListDTO(1, "shopping", validTaskDTOs);
 	
-	private List<ToDoList> validToDoLists = List.of(validToDoList);
 	private List<ToDoListDTO> validToDoListDTOs = List.of(validToDoListDTO);
 	
 	@Test

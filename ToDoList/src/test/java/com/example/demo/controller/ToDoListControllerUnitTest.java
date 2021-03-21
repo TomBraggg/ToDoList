@@ -23,7 +23,7 @@ import com.example.demo.dto.ToDoListDTO;
 import com.example.demo.service.ToDoListService;
 
 @SpringBootTest
-public class ToDoListControllerUnitTest {
+class ToDoListControllerUnitTest {
 	
 	@Autowired
 	private ToDoListController toDoListController;

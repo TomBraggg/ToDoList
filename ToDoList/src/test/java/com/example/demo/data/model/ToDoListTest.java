@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import nl.jqno.equalsverifier.EqualsVerifier;
 
-public class ToDoListTest {
+class ToDoListTest {
 	
 	@Test
 	public void testEquals() {

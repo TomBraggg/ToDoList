@@ -11,7 +11,7 @@ import com.example.demo.data.model.Task;
 import com.example.demo.dto.TaskDTO;
 
 @SpringBootTest
-public class TaskMapperTest {
+class TaskMapperTest {
 	
 	@Autowired
 	private TaskMapper taskMapper;

@@ -16,7 +16,7 @@ import com.example.demo.dto.TaskDTO;
 import com.example.demo.mappers.TaskMapper;
 
 @SpringBootTest
-public class TaskServiceIntegrationTest {
+class TaskServiceIntegrationTest {
 	
 	@Autowired
 	private TaskService taskService;

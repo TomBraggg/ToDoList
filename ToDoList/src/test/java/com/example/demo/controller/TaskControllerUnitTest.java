@@ -23,7 +23,7 @@ import com.example.demo.dto.TaskDTO;
 import com.example.demo.service.TaskService;
 
 @SpringBootTest
-public class TaskControllerUnitTest {
+class TaskControllerUnitTest {
 
 	@Autowired
 	private TaskController taskController;

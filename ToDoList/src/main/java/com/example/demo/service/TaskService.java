@@ -29,7 +29,7 @@ public class TaskService {
 
 	public List<TaskDTO> readAllTasks() {
 		List<Task> tasks = taskRepository.findAll();
-		List<TaskDTO> taskDTOs = new ArrayList<TaskDTO>();
+		List<TaskDTO> taskDTOs = new ArrayList<>();
 		tasks.forEach(task -> taskDTOs.add(taskMapper.mapToDTO(task)));
 		return taskDTOs;
 	}

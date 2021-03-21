@@ -37,19 +37,19 @@ public class TaskController {
 	@GetMapping
 	public ResponseEntity<List<TaskDTO>> getAllTasks() {
 		List<TaskDTO> data = taskService.readAllTasks();
-		return new ResponseEntity<List<TaskDTO>>(data, HttpStatus.OK);	
+		return new ResponseEntity<>(data, HttpStatus.OK);	
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<TaskDTO> getTaskById(@PathVariable("id") int id) {
 		TaskDTO task = taskService.readTaskById(id);
-		return new ResponseEntity<TaskDTO>(task, HttpStatus.OK);
+		return new ResponseEntity<>(task, HttpStatus.OK);
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<TaskDTO> getTaskByName(@PathVariable("name") String name) {
 		TaskDTO task = taskService.readTaskByName(name);
-		return new ResponseEntity<TaskDTO>(task, HttpStatus.OK);
+		return new ResponseEntity<>(task, HttpStatus.OK);
 	}
 	
 	@PostMapping
@@ -59,18 +59,18 @@ public class TaskController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Location", String.valueOf(newTask.getId()));
 		
-		return new ResponseEntity<TaskDTO>(newTask, headers, HttpStatus.CREATED);
+		return new ResponseEntity<>(newTask, headers, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<TaskDTO> updateTask(@PathVariable("id") int id, @RequestBody Task task) {
 		TaskDTO updatedTask = taskService.updateTask(id, task);
-		return new ResponseEntity<TaskDTO>(updatedTask, HttpStatus.OK);
+		return new ResponseEntity<>(updatedTask, HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Boolean> deleteTask(@PathVariable("id") int id) {
-		return new ResponseEntity<Boolean>(taskService.deleteTask(id), HttpStatus.OK);
+		return new ResponseEntity<>(taskService.deleteTask(id), HttpStatus.OK);
 	}
 	
 }

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 
-public class TaskDTOTest {
+class TaskDTOTest {
 
 	@Test
 	public void testEquals() {

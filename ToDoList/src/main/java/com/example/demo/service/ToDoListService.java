@@ -29,7 +29,7 @@ public class ToDoListService {
 	
 	public List<ToDoListDTO> readAllToDoLists() {
 		List<ToDoList> toDoLists = toDoListRepository.findAll();
-		List<ToDoListDTO> toDoListDTOs = new ArrayList<ToDoListDTO>();
+		List<ToDoListDTO> toDoListDTOs = new ArrayList<>();
 		toDoLists.forEach(toDoList -> toDoListDTOs.add(toDoListMapper.mapToDTO(toDoList)));
 		return toDoListDTOs;
 	}
