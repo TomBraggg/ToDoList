@@ -10,21 +10,42 @@
 <body>
     <div class="container">
         <h1 class="text-center"> To Do List! </h1>
+        <br/>
         <div class="row">
             <div class="col-md">
-                <input type="number" class="form-control" id="listid" placeholder="ID"/>
+                <input type="number" class="form-control" id="listid" placeholder="To Do List ID"/>
             </div>
             <div class="col-md">
-                <input type="text" class="form-control" id="listname" placeholder="Name"/>
+                <input type="text" class="form-control" id="listname" placeholder="To Do List Name"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md text-center">
                 <br/>
-                <button class="btn btn-primary" id="getList" onclick="getList();"> Get List </button>
-                <button class="btn btn-primary" id="postList" onclick="postList();"> Post List </button>
+                <button class="btn btn-primary" id="getList" onclick="getList();"> Show List (by ID)</button>
+                <button class="btn btn-primary" id="getList" onclick="getListByName();"> Show List (by Name)</button>
+                <button class="btn btn-primary" id="postList" onclick="postList();"> Create List </button>
                 <button class="btn btn-primary" id="putList" onclick="putList();"> Update List </button>
                 <button class="btn btn-primary" id="deleteList" onclick="deleteList();"> Delete List </button>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md">
+                <input type="number" class="form-control" id="taskid" placeholder="Task ID"/>
+            </div>
+            <div class="col-md">
+                <input type="text" class="form-control" id="taskname" placeholder="Task Name"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md text-center">
+                <br/>
+                <button class="btn btn-primary" id="getList" onclick="getTask();"> Show Task (by ID)</button>
+                <button class="btn btn-primary" id="getList" onclick="getTaskByName();"> Show Task (by Name)</button>
+                <button class="btn btn-primary" id="postList" onclick="postTask();"> Create Task </button>
+                <button class="btn btn-primary" id="putList" onclick="putTask();"> Update Task </button>
+                <button class="btn btn-primary" id="deleteList" onclick="deleteTask();"> Delete Task </button>
             </div>
         </div>
         <div class="row">
