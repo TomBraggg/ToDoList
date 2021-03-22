@@ -19,7 +19,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.example.demo.data.model.Task;
 import com.example.demo.dto.TaskDTO;
-import com.example.demo.mappers.TaskMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)

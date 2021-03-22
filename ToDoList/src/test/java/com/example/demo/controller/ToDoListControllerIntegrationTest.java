@@ -21,7 +21,6 @@ import com.example.demo.data.model.Task;
 import com.example.demo.data.model.ToDoList;
 import com.example.demo.dto.TaskDTO;
 import com.example.demo.dto.ToDoListDTO;
-import com.example.demo.mappers.ToDoListMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
